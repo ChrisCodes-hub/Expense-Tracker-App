@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='app-container'>
       <ExpenseForm onAdd={addExpense} />
       <ExpenseTable expenses={expenses} onDelete={deleteExpense} />
     </div>

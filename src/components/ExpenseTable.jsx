@@ -2,8 +2,7 @@ import React from 'react'
 
   function ExpenseTable({ expenses, onDelete }) {
     return (
-      <div>
-        <h2>Expense List</h2>
+      <div className='table-box'>
         <table border="1">
           <thead>
             <tr>

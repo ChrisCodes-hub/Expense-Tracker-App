@@ -28,18 +28,44 @@ function ExpenseForm({onAdd}) {
      setAmount('');
      setDate('');
    };
+   const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
  
    return (
      <form onSubmit={handleSubmit} className='form'>
        <h2>Add Expense</h2>
- 
-       <input placeholder="Expense" value={expense} onChange={(e) => setExpense(e.target.value)} /><br />
-       <input placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} /><br />
-       <input placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} /><br />
-       <input type="number" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} /><br />
-       <input type="date" value={date} onChange={(e) => setDate(e.target.value)} /><br />
- 
-       <button type="submit">Add</button>
+       
+       <label>Expense:</label><br/>
+       <input placeholder="Expense" 
+              value={expense} 
+              onChange={(e) => setExpense(capitalizeFirstLetter(e.target.value))} /><br />
+
+       <label>Desciption:</label><br/>
+       <input placeholder="Description" 
+              value={description} 
+              onChange={(e) => setDescription(capitalizeFirstLetter(e.target.value))} /><br />
+
+       <label>Category:</label><br/>
+       <input placeholder="Category" 
+              value={category} 
+              onChange={(e) => setCategory(capitalizeFirstLetter(e.target.value))} /><br />
+
+       <label>Amount:</label><br/>
+       <input type="number" 
+       placeholder="Amount" 
+       value={amount} 
+       onChange={(e) => setAmount(e.target.value)} /><br />
+
+       <label>Period:</label><br/>
+       <input 
+       type="date" 
+       value={date} 
+       onChange={(e) => setDate(capitalizeFirstLetter(e.target.value))} /><br />
+
+       <div className="button-container">
+          <button type="submit">Add</button>
+       </div>
      </form>
    );
     
