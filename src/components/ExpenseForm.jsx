@@ -11,7 +11,7 @@ function ExpenseForm({onAdd}) {
      e.preventDefault();
  
      const newExpense = {
-       id: Date.now(), // gives unique id
+       id: Date.now(),
        expense,
        description,
        category,
@@ -19,9 +19,9 @@ function ExpenseForm({onAdd}) {
        date,
      };
  
-     onAdd(newExpense); // send this data to parent (App.js)
+     onAdd(newExpense);
      
-     // clear the form
+     
      setExpense('');
      setDescription('');
      setCategory('');
