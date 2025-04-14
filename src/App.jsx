@@ -9,6 +9,7 @@ import SearchBar from './components/SearchBar'
 function App() {
   const [expenses, setExpenses] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [darkMode, setDarkMode] = useState(false);
 
   const addExpense = (newExpense) => {
     setExpenses([...expenses, newExpense]);
@@ -24,15 +25,24 @@ function App() {
 
   return (
     <>
+    <div className={darkMode ? "app dark" : "app"}>
+           <button onClick={() => setDarkMode(!darkMode)}>
+               {darkMode ? "☀️ Light" : "🌙 Dark"}
+            </button>
+  
     <div className='main-container'>
     <div className='box'>
-    <h1>Expense Tracker</h1>
+        <h1>Expense Tracker</h1>
      </div>
+
      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm}/>
+
     <div className='app-container'>
       <ExpenseForm onAdd={addExpense} />
       <ExpenseTable expenses={filteredExpenses} onDelete={deleteExpense} />
     </div>
+    
+   </div>
    </div>
     </>
   )
