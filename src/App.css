@@ -5,9 +5,18 @@
     border-radius: 6px;
     font-weight: bold;
 }
+.search-input{
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
 .main-container{
     margin: 0 10px;
+    overflow: hidden;
     background-color:#0f214d;
+    border-radius: 5px;
 }
 .box{
     text-align: center;
@@ -51,4 +60,7 @@ input{
     background-color: #efedce;
     text-align: center;
 
+  }
+  .deleteBtn{
+    border: none;
   }
