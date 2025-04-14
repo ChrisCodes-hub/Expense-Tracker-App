@@ -1,6 +1,6 @@
 import React from 'react'
 
-function searcBar({searchTerm,onSearchChange}) {
+function searchBar({searchTerm,onSearchChange}) {
   return (
     <div>
         <input type="text"  
@@ -12,4 +12,4 @@ function searcBar({searchTerm,onSearchChange}) {
   )
 }
 
-export default searcBar
+export default searchBar
