@@ -31,6 +31,7 @@ function App() {
             </button>
   
     <div className='main-container'>
+      
     <div className='box'>
         <h1>Expense Tracker</h1>
      </div>
@@ -41,7 +42,7 @@ function App() {
       <ExpenseForm onAdd={addExpense} />
       <ExpenseTable expenses={filteredExpenses} onDelete={deleteExpense} />
     </div>
-    
+
    </div>
    </div>
     </>
