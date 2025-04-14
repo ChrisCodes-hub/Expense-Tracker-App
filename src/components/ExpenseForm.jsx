@@ -63,9 +63,7 @@ function ExpenseForm({onAdd}) {
        value={date} 
        onChange={(e) => setDate(capitalizeFirstLetter(e.target.value))} /><br />
 
-       <div className="button-container">
-          <button type="submit">Add</button>
-       </div>
+        <button className='button-container' type="submit">Add</button>
      </form>
    );
     

@@ -16,10 +16,17 @@ function App() {
   };
 
   return (
+    <>
+    <div className='main-container'>
+    <div className='box'>
+    <h1>Expense Tracker</h1>
+     </div>
     <div className='app-container'>
       <ExpenseForm onAdd={addExpense} />
       <ExpenseTable expenses={expenses} onDelete={deleteExpense} />
     </div>
+   </div>
+    </>
   )
 }
 
