@@ -34,6 +34,7 @@
     padding: 10px;
     border-radius: 6px;
     font-weight: bold;
+    min-width: 140px;
 }
 input{
     margin-bottom: 10px;
@@ -103,6 +104,10 @@ input{
   
   .dark-mode-toggle:hover {
     background-color: #45a049;
+  }
+  .toggleBtn{
+    margin: auto 30px;
+    position: absolute;
   }
 
 

@@ -23,7 +23,11 @@ import React from 'react'
                 <td>{item.amount}</td>
                 <td>{item.date}</td>
                 <td>
-                  <button className='deleteBtn' onClick={() => onDelete(item.id)}>❌</button>
+                  <button 
+                    className='deleteBtn' 
+                    onClick={() => onDelete(item.id)}>
+                    <i class="fas fa-trash"></i> 
+                  </button>
                 </td>
               </tr>
             ))}

@@ -26,7 +26,7 @@ function App() {
   return (
     <>
     <div className={darkMode ? "app dark" : "app"}>
-           <button onClick={() => setDarkMode(!darkMode)}>
+           <button className='toggleBtn' onClick={() => setDarkMode(!darkMode)}>
                {darkMode ? "☀️ Light" : "🌙 Dark"}
             </button>
   
